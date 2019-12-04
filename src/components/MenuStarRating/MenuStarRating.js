@@ -21,5 +21,5 @@ export function MenuStarRating({rating}) {
 
 function Star({filled}) {
   const library = filled ? 'fas' : 'far'
-  return <FontAwesomeIcon className='blue' icon={ [ library, 'star'  ]  } />
+  return <FontAwesomeIcon className='red' icon={ [ library, 'star'  ]  } />
 }

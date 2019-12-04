@@ -6,13 +6,17 @@ import './Header.css'
 
 export default class Header extends Component {
   handleLogoutClick = () => {
-    // DO SOMETHING
     TokenService.clearAuthToken()
   }
 
-  renderLogoutLink() {
+  renderHeaderLoggedIn() {
     return (
       <div className='Header__logged-in'>
+        <Link
+          to='/create-meal'>
+          Create a Meal
+        </Link>
+        {' '}
         <Link
           onClick={this.handleLogoutClick}
           to='/'>
@@ -22,7 +26,7 @@ export default class Header extends Component {
     )
   }
 
-  renderLoginLink() {
+  renderHeaderNotLoggedIn() {
     return (
       <div className='Header__not-logged-in'>
         <Link
@@ -42,18 +46,18 @@ export default class Header extends Component {
       <nav className='Header'>
         <h1>
           <Link to='/'>
-            <FontAwesomeIcon className='blue' icon='gift' />
+            <FontAwesomeIcon className='red' icon='utensils' />
             {' '}
             Fuudi
           </Link>
         </h1>
-        <span className='Header__tagline--wide'>Because real foodies eat home cooked.</span>
+        <span className='Header__tagline--wide'>Be a foodie. Rediscover home cooked.</span>
         {TokenService.hasAuthToken()
-          ? this.renderLogoutLink()
-          : this.renderLoginLink()}
+          ? this.renderHeaderLoggedIn()
+          : this.renderHeaderNotLoggedIn()}
       </nav>
 
-      <span className='Header__tagline--narrow'>Because real foodies eat home cooked.</span>
+      <span className='Header__tagline--narrow'>Be a foodie. Rediscover home cooked.</span>
     </>
   }
 }

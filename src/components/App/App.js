@@ -7,6 +7,8 @@ import MenuListPage from '../../routes/MenuListPage/MenuListPage'
 import MenuPage from '../../routes/MenuPage/MenuPage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
+import CreateMealPage from '../../routes/CreateMealPage/CreateMealPage'
+
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 import './App.css'
 
@@ -39,6 +41,10 @@ class App extends Component {
             <Route
               path={'/register'}
               component={RegistrationPage}
+            />
+            <Route
+              path={'/create-meal'}
+              component={CreateMealPage}
             />
             <Route
               path={'/menu/:menuId'}

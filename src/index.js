@@ -20,6 +20,7 @@ import {
   faPenAlt,
   faQuoteLeft,
   faStar as fasStar,
+  faUtensils,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -33,6 +34,7 @@ library.add(
   faQuoteLeft,
   farStar,
   fasStar,
+  faUtensils,
 )
 
 ReactDOM.render(
