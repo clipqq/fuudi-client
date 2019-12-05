@@ -5,7 +5,8 @@
 }
 
 .Input,
-.Textarea {
+.Textarea,
+.Select {
   border: 1px solid #ddd;
   display: block;
   font-size: 1.1em;

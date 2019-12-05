@@ -26,6 +26,12 @@ export function Input({ className, ...props }) {
   )
 }
 
+export function Select({ className, ...props }) {
+  return (
+    <select className={['Select', className].join(' ')} {...props} />
+  )
+}
+
 export function Required({ className, ...props }) {
   return (
     <span className={['Required', className].join(' ')} {...props}>

@@ -30,6 +30,20 @@ const AuthApiService = {
                 res.json()
             )
     },
+    postMeal(user) {
+        return fetch(`${config.API_ENDPOINT}/create-meal`, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json',
+                },
+                body: JSON.stringify(user),
+            })
+            .then(res =>
+                (!res.ok) ?
+                res.json().then(e => Promise.reject(e)) :
+                res.json()
+            )
+    },
     postRefresh() {
         const authToken = TokenService.getAuthToken()
         return fetch(`${config.API_ENDPOINT}/auth/refresh`, {
