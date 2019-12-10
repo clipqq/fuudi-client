@@ -34,7 +34,9 @@ export default class MenuPage extends Component {
     return <>
       <div className='MenuPage__image' style={{backgroundImage: `url(${menu.image})`}} />
       <h2>{menu.title}</h2>
-      <MenuContent menu={menu} />
+      <MenuDescription menu={menu} />
+
+
       <MenuReviews reviews={reviews} />
       <ReviewForm />
     </>
@@ -60,10 +62,10 @@ export default class MenuPage extends Component {
   }
 }
 
-function MenuContent({ menu }) {
+function MenuDescription({ menu }) {
   return (
-    <p className='MenuPage__content'>
-      {menu.content}
+    <p className='MenuPage__description'>
+      {menu.description}
     </p>
   )
 }
@@ -77,7 +79,7 @@ function MenuReviews({ reviews = [] }) {
             <FontAwesomeIcon
               size='lg'
               icon='quote-left'
-              className='MenuPage__review-icon blue'
+              className='MenuPage__review-icon red'
             />
             {review.text}
           </p>

@@ -1,45 +1,45 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 const MenuListContext = React.createContext({
-  menuList: [],
-  error: null,
-  setError: () => {},
-  clearError: () => {},
-  setMenuList: () => {},
-})
-export default MenuListContext
-
-export class MenuListProvider extends Component {
-  state = {
     menuList: [],
     error: null,
-  };
+    setError: () => {},
+    clearError: () => {},
+    setMenuList: () => {},
+});
+export default MenuListContext;
 
-  setMenuList = menuList => {
-    this.setState({ menuList })
-  }
+export class MenuListProvider extends Component {
+    state = {
+        menuList: [],
+        error: null,
+    };
 
-  setError = error => {
-    console.error(error)
-    this.setState({ error })
-  }
+    setMenuList = menuList => {
+        this.setState({ menuList });
+    };
 
-  clearError = () => {
-    this.setState({ error: null })
-  }
+    setError = error => {
+        console.error(error);
+        this.setState({ error });
+    };
 
-  render() {
-    const value = {
-      menuList: this.state.menuList,
-      error: this.state.error,
-      setError: this.setError,
-      clearError: this.clearError,
-      setMenuList: this.setMenuList,
+    clearError = () => {
+        this.setState({ error: null });
+    };
+
+    render() {
+        const value = {
+            menuList: this.state.menuList,
+            error: this.state.error,
+            setError: this.setError,
+            clearError: this.clearError,
+            setMenuList: this.setMenuList,
+        };
+        return (
+            <MenuListContext.Provider value={value}>
+                {this.props.children}
+            </MenuListContext.Provider>
+        );
     }
-    return (
-      <MenuListContext.Provider value={value}>
-        {this.props.children}
-      </MenuListContext.Provider>
-    )
-  }
 }
