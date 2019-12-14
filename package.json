@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Starter code for learning about authentication.",
   "private": true,
+  "engines": {
+    "node": "^13.3.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
