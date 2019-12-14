@@ -1,5 +1,7 @@
 .Header {
-  height: 40px;
+  height: 60px;
+  padding-top: 60px;
+  padding-bottom: 30px;
   display: flex;
   align-items: normal;
   justify-content: space-between;
@@ -27,7 +29,7 @@
   margin-top: 10px;
 }
 
-.Header__not-logged-in {
+.Header__not-logged-in, .Header__logged-in {
   display: flex;
   flex: 1;
   align-items: center;
@@ -58,7 +60,7 @@
   }
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 600px) {
   .Header__tagline--wide {
     display: none;
   }

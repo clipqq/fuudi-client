@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
-import { Button, Input, Required, Select } from '../Utils/Utils';
-import AuthApiService from '../../services/auth-api-service';
+import React, { Component } from 'react'
+import { Button, Input, Required, Select } from '../Utils/Utils'
+import AuthApiService from '../../services/auth-api-service'
 
 export default class CreateMealForm extends Component {
     static defaultProps = {
-        onCreateSuccess: () => {
-        },
-    };
+        onCreateSuccess: () => {},
+    }
 
-    state = { error: null };
+    state = { error: null }
 
     handleSubmit = ev => {
-        ev.preventDefault();
+        ev.preventDefault()
         const {
             meal_title,
             image_url,
@@ -21,8 +20,8 @@ export default class CreateMealForm extends Component {
             cuisine_type,
             description,
             pickup_instructions,
-        } = ev.target;
-        this.setState({ error: null });
+        } = ev.target
+        this.setState({ error: null })
         AuthApiService.postMeal({
             title: meal_title.value,
             image: image_url.value,
@@ -34,25 +33,25 @@ export default class CreateMealForm extends Component {
             pickup_instructions: pickup_instructions.value,
         })
             .then(meal => {
-                meal_title.value = '';
-                image_url.value = '';
-                locations_served.value = '';
-                payment_type_accepted.value = '';
-                diet_type.value = '';
-                cuisine_type.value = '';
-                description.value = '';
-                pickup_instructions.value = '';
-                this.props.onCreateSuccess();
+                meal_title.value = ''
+                image_url.value = ''
+                locations_served.value = ''
+                payment_type_accepted.value = ''
+                diet_type.value = ''
+                cuisine_type.value = ''
+                description.value = ''
+                pickup_instructions.value = ''
+                this.props.onCreateSuccess()
             })
             .catch(res => {
                 // Getting a console warning, change below to DO something
                 // User can click form submit twice, fix that
-                this.setState({ error: res.error });
-            });
-    };
+                this.setState({ error: res.error })
+            })
+    }
 
     render() {
-        const { error } = this.state;
+        const { error } = this.state
         return (
             <form className="CreateMealForm" onSubmit={this.handleSubmit}>
                 <div role="alert">
@@ -139,6 +138,7 @@ export default class CreateMealForm extends Component {
                         Diet Type
                     </label>
                     <Select name="diet_type">
+                        <option value="">None Specified</option>
                         <option value="Vegan">Vegan</option>
                         <option value="Vegetarian">Vegetarian</option>
                         <option value="Paleo">Paleo</option>
@@ -163,6 +163,6 @@ export default class CreateMealForm extends Component {
 
                 <Button type="submit">Create</Button>
             </form>
-        );
+        )
     }
 }
