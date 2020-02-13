@@ -8,7 +8,7 @@ import MenuPage from '../../routes/MenuPage/MenuPage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import RegistrationPage from '../../routes/RegistrationPage/RegistrationPage'
 import CreateMealPage from '../../routes/CreateMealPage/CreateMealPage'
-import OrdersPage from '../../routes/OrdersPage/OrdersPage'
+// import OrdersPage from '../../routes/OrdersPage/OrdersPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 import './App.css'
 
@@ -41,7 +41,7 @@ class App extends Component {
                             path={'/create-meal'}
                             component={CreateMealPage}
                         />
-                        <Route path={'/orders'} component={OrdersPage} />
+                        {/* <Route path={'/orders'} component={OrdersPage} /> */}
                         <Route path={'/menu/:menuId'} component={MenuPage} />
                         <Route component={NotFoundPage} />
                     </Switch>

@@ -47,8 +47,8 @@ export default class MenuPage extends Component {
     let content
     if (error) {
       content = (error.error === `Menu doesn't exist`)
-        ? <p className='red'>Menu not found</p>
-        : <p className='red'>There was an error</p>
+        ? <p className='red'>Unfortunately, this menu was not found.</p>
+        : <p className='red'>Please login and try again.</p>
     } else if (!menu.id) {
       content = <div className='loading' />
     } else {

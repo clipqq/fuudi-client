@@ -30,7 +30,7 @@ export default class MenuListPage extends Component {
     return (
       <Section list className='MenuListPage'>
         {error
-          ? <p className='red'>There was an error, try again</p>
+          ? <p className='red'>Please login and try again.</p>
           : this.renderMenu()}
       </Section>
     )
