@@ -1,5 +1,7 @@
 # Fuudi Client
 
+* [LIVE:] https://fuudi-app.clipqq.now.sh/
+
 # What is Fuudi?
 
 Buvie is a platform where users can create menus of their favorite foods and let other users rate them!
