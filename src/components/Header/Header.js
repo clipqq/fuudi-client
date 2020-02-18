@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import './Header.css'
 import Hamburger from '../Hamburger/Hamburger'
@@ -12,11 +12,11 @@ export default class Header extends Component {
     renderHeaderLoggedIn() {
         return (
             <div className="Header__logged-in">
-                <Router>
-                    <Link onClick={this.handleLogoutClick} to="/">
-                        Logout
-                    </Link>
-                </Router>
+                {/* <Link to="/orders">My Orders</Link>{' '}
+                <Link to="/create-meal">Create a Meal</Link>{' '} */}
+                <Link onClick={this.handleLogoutClick} to="/">
+                    Logout
+                </Link>
             </div>
         )
     }
@@ -24,12 +24,8 @@ export default class Header extends Component {
     renderHeaderNotLoggedIn() {
         return (
             <div className="Header__not-logged-in">
-                <Router>
-                    <div>
-                        <Link to="/login">Log in</Link>
-                        <Link to="/register">Register</Link>
-                    </div>
-                </Router>
+                <Link to="/login">Log in</Link>
+                <Link to="/register">Register</Link>
             </div>
         )
     }

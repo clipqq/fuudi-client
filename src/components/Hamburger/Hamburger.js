@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './Hamburger.css'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import TokenService from '../../services/token-service'
 import '../Header/Header.css'
@@ -66,9 +66,7 @@ class App extends Component {
                         this.handleLinkClick()
                     }}
                 >
-                    <Router>
-                        <Link to={'/' + val}>{val}</Link>
-                    </Router>
+                    <Link to={'/' + val}>{val}</Link>
                 </MenuItem>
             )
         })
@@ -76,17 +74,15 @@ class App extends Component {
         return (
             <div>
                 <div style={styles.container}>
-                    <Router>
-                        <Link to="/">
-                            <div style={styles.logo}>
-                                <FontAwesomeIcon
-                                    className="white"
-                                    icon="utensils"
-                                />{' '}
-                                <span className="logo">Fuudi</span>
-                            </div>
-                        </Link>
-                    </Router>
+                    <Link to="/">
+                        <div style={styles.logo}>
+                            <FontAwesomeIcon
+                                className="white"
+                                icon="utensils"
+                            />{' '}
+                            <span className="logo">Fuudi</span>
+                        </div>
+                    </Link>
                     <MenuButton
                         open={this.state.menuOpen}
                         onClick={() => this.handleMenuClick()}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Header from '../Header/Header'
 // import PrivateRoute from '../Utils/PrivateRoute'
 // import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
@@ -30,26 +30,21 @@ class App extends Component {
                     {this.state.hasError && (
                         <p className="red">There was an error! Oh no!</p>
                     )}
-                    <Router>
-                        <Switch>
-                            <Route exact path={'/'} component={MenuListPage} />
-                            <Route path={'/login'} component={LoginPage} />
-                            <Route
-                                path={'/register'}
-                                component={RegistrationPage}
-                            />
-                            <Route
-                                path={'/create-meal'}
-                                component={CreateMealPage}
-                            />
-                            {/* <Route path={'/orders'} component={OrdersPage} /> */}
-                            <Route
-                                path={'/menu/:menuId'}
-                                component={MenuPage}
-                            />
-                            <Route component={NotFoundPage} />
-                        </Switch>
-                    </Router>
+                    <Switch>
+                        <Route exact path={'/'} component={MenuListPage} />
+                        <Route path={'/login'} component={LoginPage} />
+                        <Route
+                            path={'/register'}
+                            component={RegistrationPage}
+                        />
+                        <Route
+                            path={'/create-meal'}
+                            component={CreateMealPage}
+                        />
+                        {/* <Route path={'/orders'} component={OrdersPage} /> */}
+                        <Route path={'/menu/:menuId'} component={MenuPage} />
+                        <Route component={NotFoundPage} />
+                    </Switch>
                 </main>
             </div>
         )
