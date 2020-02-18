@@ -56,7 +56,7 @@ class App extends Component {
                 transition: 'filter 0.5s ease',
             },
         }
-        const menu = ['Create-Meal']
+        const menu = ['Create-Meal', 'Demo-Login']
         const menuItems = menu.map((val, index) => {
             return (
                 <MenuItem

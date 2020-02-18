@@ -11,6 +11,7 @@ import CreateMealPage from '../../routes/CreateMealPage/CreateMealPage'
 // import OrdersPage from '../../routes/OrdersPage/OrdersPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 import './App.css'
+import Demo from '../../routes/Demo/DemoPage'
 
 class App extends Component {
     state = { hasError: false }
@@ -32,6 +33,7 @@ class App extends Component {
                     )}
                     <Switch>
                         <Route exact path={'/'} component={MenuListPage} />
+                        <Route exact path={'/demo-login'} component={Demo} />
                         <Route path={'/login'} component={LoginPage} />
                         <Route
                             path={'/register'}
