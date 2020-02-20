@@ -67,6 +67,7 @@ export default class CreateMealForm extends Component {
                         type="text"
                         required
                         id="RegistrationForm__meal_title"
+                        maxLength={100}
                     ></Input>
                 </div>
 
@@ -91,6 +92,7 @@ export default class CreateMealForm extends Component {
                         type="text"
                         required
                         id="RegistrationForm__description"
+                        maxLength={500}
                     ></Input>
                 </div>
 
@@ -103,6 +105,7 @@ export default class CreateMealForm extends Component {
                         type="text"
                         required
                         id="RegistrationForm__pickup_instructions"
+                        maxLength={500}
                     ></Input>
                 </div>
 
@@ -130,6 +133,7 @@ export default class CreateMealForm extends Component {
                         name="cuisine_type"
                         type="text"
                         id="RegistrationForm__cuisine_type"
+                        maxLength={50}
                     ></Input>
                 </div>
 
@@ -158,6 +162,7 @@ export default class CreateMealForm extends Component {
                         name="image_url"
                         type="text"
                         id="RegistrationForm__image_url"
+                        maxLength={500}
                     ></Input>
                 </div>
 

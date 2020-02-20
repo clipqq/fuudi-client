@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import './Header.css'
 import Hamburger from '../Hamburger/Hamburger'
 
-export default class Header extends Component {
+class Header extends Component {
     handleLogoutClick = () => {
         TokenService.clearAuthToken()
     }
@@ -30,12 +31,23 @@ export default class Header extends Component {
         )
     }
 
+    renderBackButton() {
+        const pathname = this.props.location.pathname
+        if (pathname !== '/') {
+            return (
+                <>
+                    <Link to="/">❮ Back to Menus</Link>
+                </>
+            )
+        }
+    }
+
     render() {
         return (
             <>
                 <nav className="Header">
                     <Hamburger />
-
+                    {this.renderBackButton()}
                     {TokenService.hasAuthToken()
                         ? this.renderHeaderLoggedIn()
                         : this.renderHeaderNotLoggedIn()}
@@ -52,3 +64,5 @@ export default class Header extends Component {
         )
     }
 }
+
+export default withRouter(Header)

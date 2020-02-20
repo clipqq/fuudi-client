@@ -61,7 +61,7 @@ export default class Demo extends Component {
                         required
                         name="user_name"
                         id="LoginForm__user_name"
-                        value="demo_user"
+                        defaultValue="demo_user"
                     ></Input>{' '}
                 </div>{' '}
                 <div className="password">
@@ -71,7 +71,7 @@ export default class Demo extends Component {
                         name="password"
                         type="password"
                         id="LoginForm__password"
-                        value="Password!1"
+                        defaultValue="Password!1"
                     ></Input>{' '}
                 </div>{' '}
                 <Button type="submit">Login as Demo User </Button>{' '}

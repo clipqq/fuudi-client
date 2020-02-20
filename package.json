@@ -43,10 +43,6 @@
         "enzyme-adapter-react-16": "^1.9.1",
         "enzyme-to-json": "^3.3.5"
     },
-    "contributors": [
-        "Thomas `tomatao` Hudspith-Tatham <iammotivated@gmail.com>",
-        "Joshua Reade Harris <jharris@thinkful.com>"
-    ],
     "license": "MIT",
     "resolutions": {
         "//node-gyp": "5.0.0"
