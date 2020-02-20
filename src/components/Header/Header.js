@@ -60,6 +60,15 @@ class Header extends Component {
                 <span className="Header__tagline--narrow">
                     Be a foodie. Rediscover home cooked.
                 </span>
+
+                <h3 className="Header__tagline--wide">
+                    Login or Register to Create, View, and Rate your favorite
+                    recipes!
+                </h3>
+                <h3 className="Header__tagline--narrow">
+                    Login or Register to Create, View, and Rate your favorite
+                    recipes!
+                </h3>
             </>
         )
     }
