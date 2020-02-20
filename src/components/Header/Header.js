@@ -58,7 +58,7 @@ class Header extends Component {
                 </span>
 
                 <span className="Header__tagline--narrow">
-                    Be a foodie. Rediscover home cooked.
+                    Be a foodie. Rediscover home cooked.git
                 </span>
 
                 <h3 className="Header__tagline--wide">

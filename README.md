@@ -1,6 +1,12 @@
 # Fuudi Client
 
 * [LIVE:] https://fuudi-app.clipqq.now.sh/
+* [Menu List](screenshots/MenuList.png)
+* [Login](screenshots/Login.png)
+* [Menu Review](screenshots/MenuReview.png)
+* [Register](screenshots/Register.png)
+* [Create Meal](screenshots/CreateMeal.png)
+
 
 # What is Fuudi?
 
