@@ -1,16 +1,18 @@
 # Fuudi Client
 
 * [LIVE:] https://fuudi-app.clipqq.now.sh/
+
+# What is Fuudi?
+
+Buvie is a platform where users can create menus of their favorite foods and let other users rate them!
+
+## Screenshots
+
 * [Menu List](screenshots/MenuList.png)
 * [Login](screenshots/Login.png)
 * [Menu Review](screenshots/MenuReview.png)
 * [Register](screenshots/Register.png)
 * [Create Meal](screenshots/CreateMeal.png)
-
-
-# What is Fuudi?
-
-Buvie is a platform where users can create menus of their favorite foods and let other users rate them!
 
 ## Technology Stack
 

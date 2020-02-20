@@ -31,6 +31,25 @@ class Header extends Component {
         )
     }
 
+    userLoggedIn(){
+        return
+    }
+
+    userNotLoggedIn() {
+        return (
+            <div>
+                <h3 className="Header__tagline--wide">
+                    Login or Register to Create, View, and Rate your favorite
+                    recipes!
+                </h3>
+                <h3 className="Header__tagline--narrow">
+                    Login or Register to Create, View, and Rate your favorite
+                    recipes!
+                </h3>
+            </div>
+        )
+    }
+
     renderBackButton() {
         const pathname = this.props.location.pathname
         if (pathname !== '/') {
@@ -61,14 +80,9 @@ class Header extends Component {
                     Be a foodie. Rediscover home cooked.git
                 </span>
 
-                <h3 className="Header__tagline--wide">
-                    Login or Register to Create, View, and Rate your favorite
-                    recipes!
-                </h3>
-                <h3 className="Header__tagline--narrow">
-                    Login or Register to Create, View, and Rate your favorite
-                    recipes!
-                </h3>
+                {TokenService.hasAuthToken()
+                    ? this.userLoggedIn()
+                    : this.userNotLoggedIn()}
             </>
         )
     }
